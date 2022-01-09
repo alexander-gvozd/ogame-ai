@@ -1,4 +1,5 @@
 class MetalMine {
+    static id = 1;
     static baseCost = {
         metal: 60,
         crystal: 15,

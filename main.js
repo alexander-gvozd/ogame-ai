@@ -3,7 +3,6 @@ const auth = require("./services/auth");
 const colors = require("colors");
 const cheerio = require("cheerio");
 const AIBuilder = require("./AI/AIBuilder");
-const log = require("./services/log");
 const db = require("./services/database");
 const pageUrls = {
     mainPage: "https://s176-ru.ogame.gameforge.com/game/index.php?page=ingame&component=overview",
@@ -13,7 +12,6 @@ const pageContents = {
     $mainPage: null,
     $resourcesPage: null,
 }
-const schedule = require('node-schedule');
 
 async function collectEmpireInfo() {
     let authorizationCookie = await db.session.get();
@@ -119,8 +117,6 @@ async function collectEmpireInfo() {
 async function Main() {
     const [empire, authorizationCookie] = await collectEmpireInfo();
     const ai = new AIBuilder(empire, authorizationCookie);
-
-    console.log(empire);
 
     await ai.act();
 }

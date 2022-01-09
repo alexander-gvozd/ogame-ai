@@ -1,4 +1,5 @@
 class MetalStorage {
+    static id = 22;
     static baseCost = {
         metal: 1000,
     }

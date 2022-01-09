@@ -1,4 +1,5 @@
 class SolarPlant {
+    static id = 4;
     static baseCost = {
         metal: 75,
         crystal: 30,

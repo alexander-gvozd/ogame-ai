@@ -1,4 +1,5 @@
 class DeuteriumSynthesizer {
+    static id = 3;
     static baseCost = {
         metal: 225,
         crystal: 75,

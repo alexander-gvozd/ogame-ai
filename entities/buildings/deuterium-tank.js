@@ -1,4 +1,5 @@
 class DeuteriumTank {
+    static id = 24;
     static baseCost = {
         metal: 1000,
         crystal: 1000,
